@@ -5,11 +5,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prime Checker</title>
-    <script src="/script.js"></script>
+    <script defer src="/script.js"></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        :root {
+            --body_color: rgb(243, 243, 243);
+            ;
+        }
+
+        .spacing_top>*+* {
+            margin-top: 1.5em;
+        }
+
+        h1,
+        h2 {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 100vh;
+            background-color: var(--body_color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        label {
+            display: block;
+            font-weight: 800;
+            font-size: 1rem;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin-bottom: .5em;
+        }
+
+        .prime_number_title {
+            text-align: center;
+            margin-bottom: .75em;
+            font-size: 1.75rem;
+        }
+
+        .prime_number_card {
+            width: 100%;
+            height: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            background-color: var(--body_color);
+            box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, .14);
+            padding: 1.5em;
+            height: fit-content;
+        }
+
+        .form_control input {
+            border-radius: 2px;
+            width: 100%;
+            height: 35px;
+            outline: none;
+            border: none;
+        }
+
+        .form_control input[type="text"] {
+            padding: .85em;
+            font-size: .88rem;
+        }
+
+        .form_control input[type="submit"] {
+            font-size: large;
+            background-color: coral;
+            border-radius: 5px;
+
+        }
+    </style>
+
+    </style>
+
 </head>
 
 <body>
-    <h1>Kelvin Practicing Prime Test</h1>
+    <section class="prime_number_card spacing_top">
+        <h2 class="prime_number_title">Prime Number</h2>
+        <form class="prime_number_form spacing_top">
+            <div class="form_control">
+                <label for="prime_number_input">Enter a number</label>
+                <input type="text" id="prime_number_input">
+            </div>
+
+            <div class="form_control">
+                <label for="">Output</label>
+                <p id="prime_number_output">
+                    Please submit a number to check 'primeness' of the number
+                </p>
+            </div>
+
+            <div class="form_control ">
+                <input type="submit">
+            </div>
+        </form>
+    </section>
 </body>
 
 </html>
