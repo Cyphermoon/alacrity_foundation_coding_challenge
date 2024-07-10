@@ -21,6 +21,7 @@
             margin-top: 1.5em;
         }
 
+
         h1,
         h2 {
             margin: 0;
@@ -60,6 +61,13 @@
             height: fit-content;
         }
 
+        .detail {
+            font-size: .75rem;
+            color: gray;
+            margin-bottom: .5em;
+            display: inline-block;
+        }
+
         .form_control input {
             border-radius: 2px;
             width: 100%;
@@ -89,8 +97,10 @@
     <section class="prime_number_card spacing_top">
         <h2 class="prime_number_title">Prime Number</h2>
         <form class="prime_number_form spacing_top">
+
             <div class="form_control">
                 <label for="prime_number_input">Enter a number</label>
+                <span class="detail">Use the format "1-2" to enter a range</span>
                 <input type="text" id="prime_number_input">
             </div>
 
